@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./motorcycle-solid.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Royal Enfield</title>
+</head>
+
+<body>
+
+    <!-- Top Part -->
+    <!-- we name our div as container  -->
+    <div class="container ">
+        <!-- this part is the title for the website -->
+        <div id="title">
+            <h5 id="topname" style=" position: relative; top: 15px; font-size: 20px; color: #ff0000;">ROYAL ENFIELD</h5>
+        </div>
+        <!-- below we named our div as path for the below 2nd function  to change the color of the clip path everytime when the bike is clicked -->
+        <div class="path">
+
+
+
+        </div>
+
+        <!-- and we created a div and named as menubar 2 ul in more li -->
+        <div class="menubar">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services
+                    <ul>
+                        <li>marketing</li>
+                        <li>design
+                            <ul>
+                                <li>web</li>
+                                <li>graphics</li>
+                                <li>interior</li>
+                            </ul>
+                        </li>
+                        <li>Branding</li>
+                    </ul>
+                </li>
+                <li>Motorcycle</li>
+                <li>Contact</li>
+
+            </ul>
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- we created div and named as thumbnail with 3 li for images -->
+    <div class="thumbnail">
+
+        <!-- below we have given an onclick function to ensure that the below function reflects -->
+        <li><img src="./kindpng_5585874.png" onclick="bike('kindpng_5585874.png '); path('#122919')"></li>
+        <li><img src="./kindhym.png" onclick="bike('kindhym.png '); path('white')"></li>
+        <li><img src="./blueconti.png" onclick="bike('blueconti.png'); path('#18aaff')"></li>
+
+
+        <div class="mainimage">
+            <img src="./kindpng_5585874.png" class="bike" alt="">
+        </div>
+
+        <!-- below we created a div named as content and we have given a p, h1 and h5 tag -->
+
+
+
+        <div class="aboutre">
+
+            <button style="position: relative; left: 150px;" id="show">Show</button>
+            <button style="position: relative; left: 150px;" id="hide">Hide</button>
+
+
+            <p style="position: relative; text-align: center; top: 25px; margin: 0; color: #fffef9; font-family: 'Times New Roman', Times, serif; font-weight: bolder; "
+                id="para">Royal Enfield is an Indian multinational motorcycle manufacturing company headquartered in
+                Chennai. The
+                Royal Enfield brand, including its original English heritage, is the oldest global motorcycle brand in
+                continuous production. The company operates manufacturing plants in Chennai in India.</p>
+
+
+
+        </div>
+        <div id="line" style="border-style: solid; border-color: gray; border-width: 1px;"></div>
+    </div>
+
+    <footer>
+        <div class="social-menu">
+            <ul>
+                <li><a href="#" target="blank"><i class="fab fa-facebook"></i></i></a></li>
+                <li><a href="#" target="blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <h5 style="color: #d8d5d5; position: relative; bottom: 20px; left: 75%;">Join The Conversation</h5>
+        </div>
+
+        <div id="mappart">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124363.06256127321!2d80.14114576007297!3d13.07726326478339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a0ff4a1571%3A0xc18b19c660d878d5!2sRoyal%20Enfield%20Showroom%20-%20Rudraa%20Motors!5e0!3m2!1sen!2sin!4v1682500582911!5m2!1sen!2sin"
+                width="110" height="90"
+                style="border: 0;color: #ff0000; position: relative; padding-left: 47%;top: -70%;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h4 style="position: relative; font-family: Arial, Helvetica, sans-serif; color: #fffef9; left: 46.5%;">
+                Locate
+                our Store</h4>
+        </div>
+        <div class="content">
+            <h1 style=" text-align: center;"> Made like a gun goes like a bullet</h1>
+        </div>
+        <div style=" position: relative; bottom: 100; color: red;" id="copyright">&#169 copyright Royal Enfield </div>
+
+    </footer>
+
+</body>
+<!-- below we created a function in js document.queryselector() this selectes the particular variable inside the  paranthesis -->
+<!-- this function is created to ensure that while clicking the left side bike the center bike's image should change as the bike which we clicked on the left side  -->
+
+<script>
+    function bike(image) {
+        document.querySelector('.bike').src = image;
+    }
+
+    //below function is given to ensure that while clicking the thumbnail the clip-path's color should change 
+
+    function path(color) {
+        const path = document.querySelector('.path');
+        path.style.background = color;
+    }
+
+    // below we used jquery function to makesure that hide button hides with fadeout effect and show button displays with 
+
+
+    $(document).ready(function () {
+        $("#hide").click(function () {
+            $("#para").fadeOut('slow');
+        });
+        $("#show").click(function () {
+            $("#para").fadeIn('slow');
+        });
+    });
+
+
+</script>
+
+</html>

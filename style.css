@@ -1,0 +1,269 @@
+/* if we dont need any default margin or padding we should give * tag */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Below we are adjusting our main div container and background  */
+
+.container {
+    width: 100%;
+    height: 10vh;
+    background: rgb(0, 0, 0);
+}
+
+/* below we are adjusting our child(button div)  */
+
+.child {
+    
+    position: relative;
+    left: 60%;
+
+}
+
+
+/* belwo we are adjusting button inside child div */
+
+button {
+    text-transform: uppercase;
+    color: rgb(223, 57, 6);
+    margin-right: 100px;
+    position: relative;
+    left: 50%;
+    width: 78px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 60px;
+
+
+}
+
+/* we are adjuting the color of the button while pointing the cursor  */
+
+button:hover{
+    color: rgb(47, 0, 255);
+
+}
+
+/* below we are targeting the div  */
+
+.thumbnail {
+    padding-top: 7%;
+    height: 80vh;
+    width: 100%;
+    background-color: #000;
+
+}
+
+/* bekiw we are targeting the li tag inside div adjusting ths positon and alignment of li  */
+
+.thumbnail li {
+    list-style: none;
+    position: relative;
+    margin-top: 50px;
+}
+
+/* now we are adjusting the image how the image should display */
+
+.thumbnail img {
+    display: block;
+    max-width: 120px;
+    transition: .6s;
+}
+
+/* Now we are giving effect for the image to reflect while pointing it hover works when we point something  */
+/* Transform translatex is a tag which reflexts the targeted part to move in x direction and y for y direction */
+/* transition tag is used to adjust the time of the above affect either slow or fast  */
+.thumbnail img:hover{
+    transform: translatex(50px);
+    transition: .7s;
+}
+
+/* We are aligning the position of the main image div's image below */
+
+.mainimage img{
+    position: relative;
+    left: 20%;
+    top: 30;
+    max-width: 400px;
+    max-height: 300px;
+    transition: .6s;
+
+}
+
+/* below we are setting a transition when the bike converst to main picture it moves while pointing cursure towards it */
+
+.mainimage img:hover{
+    transform: translatex(500px);
+    transition: .8s;
+}
+
+/* below we are altering the position of content div and font variation on the content */
+.content{
+    position: absolute;
+    cursor: pointer;
+    max-width: 40%;
+    right: 40%;
+    top: 40%;
+    color: rgb(244, 22, 22);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* below we are targeting the h5 tag inside content and adjusting   */
+
+.content h1{
+    position: relative;
+    bottom: -750px;
+    left: 340%;
+    border: 2px;
+    border-style: solid;
+    border-radius: 40px;
+    font-size: 11px;
+    font-weight: bolder;
+    color: #eef0ee;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-left: 10%;
+
+    
+}
+
+/* we created a div named as path and implemented some adjustments and we used a tool called clip path */
+/* clip-path circle crates a circle interface inside the website and will be allignet by giving adjustments inside the parathesis */
+
+.path{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgb(209, 201, 201);
+    clip-path: circle(320px at left 400px );
+}
+
+/* below footer is created to place social media interfaces  */
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: var(--white);
+    height: 20vh;
+    
+}
+
+.social-menu ul {
+    display: flex;
+    position: relative;
+    left: 85%;
+    padding: 0;
+}
+
+.social-menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.social-menu ul li .fab {
+    font-size: 25px;
+    line-height: 40px;
+    transition: .3s;
+    color: #000;
+}
+
+.social-menu ul li .fab:hover {
+    color: #fff;
+}
+
+/* Social media icon alignment part */
+
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, .5);
+}
+
+/* Icon Transition effect  */
+
+.social-menu ul li a:hover {
+    transform: translate(0, -10%);
+}
+
+/* Color Change Effect part while hover for facebook */
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #4267B2;
+}
+
+/* Color Change Effect part while hover for instagram */
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #E4405F;
+}
+
+/* Color Change Effect part while hover for twitter */
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #00ACEE;
+}
+
+/* below is the  alignment and positioning for show and hide buttons */
+
+.aboutre{
+    position: relative;
+    bottom: 50%;
+    left: 50%;
+    width: 35%;
+    height: 35px;
+    color: brown;
+
+}
+
+/*below we can find the menu bar adjustments and how we aligned each and every li and ul  */
+
+.menubar{
+    width: 860px;
+    margin: 0 auto; 
+}
+
+.menubar ul{
+    list-style: none;
+    
+    
+}
+
+.menubar ul li{
+    background: #000000;
+    width: 170px;
+    border: 1px solid #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    color: #dd0c0c;
+    font-size: 14px;
+    position: relative;
+    font-family: big john;
+     
+}
+.menubar ul li:hover{
+    background: rgb(2, 2, 2);
+}
+.menubar ul ul{
+    display: none;
+
+}
+.menubar ul li:hover > ul{
+    display: block;
+
+}
+.menubar ul ul ul{
+    margin-left: 170px;
+    top: 0;
+    position: absolute;
+}
